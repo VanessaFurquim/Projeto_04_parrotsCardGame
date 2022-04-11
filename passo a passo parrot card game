@@ -1,0 +1,27 @@
+começo do jogo:
+   definir número de cartas (prompt)
+      deve ser par
+      deve ser maior que 4
+      deve ser menor que 14
+         se número inválido - retornar ao prompt
+         se número válido - distribuir cartas
+         
+distribuir cartas:
+   número definido de cartas
+   ordem aleatória
+   viradas para baixo
+      
+      pegar carta no HTML
+      associar ao número determinado pelo jogador
+      criar uma array com esse número de cartas em 		pares
+      embaralhar cartas
+
+jogar:
+   virar carta (onclick)
+      se primeira do par - manter virada
+      se segunda e diferentes - desvirar ambas em 1s
+      se segunda e iguais - manter viradas
+   contar jogadas
+
+fim do jogo:
+   prompt com número de jogadas

@@ -1,6 +1,8 @@
 // variáveis globais. //
 let numberOfCards;
 const listOfCards = ["bobrossparrot", "explodyparrot", "fiestaparrot", "metalparrot", "revertitparrot", "tripletsparrot", "unicornparrot"];
+let countingCardTurns = 0;
+let countingCorrectPairings = 0;
 
 // função para determinação da quantidade de cartas. //
 amountOfCards ();
@@ -23,11 +25,11 @@ function distributingCards() {
     for (let i = 0; i < (numberOfCards/2); i++) {
         const addCard = 
         `<div class = "card-shape" onclick="turnCard(this)">
-            <div class = "card-basic-visual back-face">
-                <img src="style/Parrot-images/front.png">
-            </div>
             <div class = "card-basic-visual front-face">
                 <img src="style/Parrot-images/${listOfCards[i]}.gif">
+            </div>
+            <div class = "card-basic-visual back-face">
+                <img src="style/Parrot-images/front.png">
             </div>
         </div>`;
 
@@ -47,6 +49,8 @@ function distributingCards() {
     }
 }
 
-function turnCard(flip){
-    flip.classList.add("back-face-turn");
+
+
+function turnCard(flip) {
+    flip.classList.add("turn-card");
 }
